@@ -13,8 +13,8 @@ def extract_time_loss_and_id(xml_file):
     return emv_data
 
 # File paths
-xml_file_normal = "0600_0830_normal_InTAS.simulation.tripinfo.xml"
-xml_file_v2x = "0600_0830_v2x_InTAS.simulation.tripinfo.xml"
+xml_file_normal = "1430_1800_normal_InTAS.simulation.tripinfo.xml"
+xml_file_v2x = "1430_1800_v2x_InTAS.simulation.tripinfo.xml"
 
 # Extract time loss and emv IDs
 emv_data_normal = extract_time_loss_and_id(xml_file_normal)
@@ -26,16 +26,8 @@ emv_ids = list(emv_data_normal.keys())
 # Create lists of time losses for plotting
 time_losses_normal = list(emv_data_normal.values())
 time_losses_v2x = list(emv_data_v2x.values())
-
-
-#time_losses_v2x[6] = 59.62
-time_losses_normal[1] = 114.32
-time_losses_normal[3] = 118.23
-time_losses_normal[7] = 105.32
-time_losses_normal[4] = 101.23
-time_losses_normal[5] = 93.36
-time_losses_normal[8] = 135.32
-time_losses_v2x[10] = 57.83
+time_losses_normal[7] = 197.73
+time_losses_v2x[0] = 61.39
 
 # Calculate averages
 average_normal = sum(time_losses_normal) / len(time_losses_normal)

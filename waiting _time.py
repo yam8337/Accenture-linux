@@ -13,8 +13,8 @@ def extract_waiting_time_and_id(xml_file):
     return emv_data
 
 # File paths
-xml_file_normal = "0600_0830_normal_InTAS.simulation.tripinfo.xml"
-xml_file_v2x = "0600_0830_v2x_InTAS.simulation.tripinfo.xml"
+xml_file_normal = "1430_1800_normal_InTAS.simulation.tripinfo.xml"
+xml_file_v2x = "1430_1800_v2x_InTAS.simulation.tripinfo.xml"
 
 # Extract waiting times and emv IDs
 emv_data_normal = extract_waiting_time_and_id(xml_file_normal)
@@ -35,27 +35,7 @@ emv_data_v2x = manipulate_waiting_time(emv_data_v2x)
 # Create lists of waiting times for plotting
 waiting_times_normal = list(emv_data_normal.values())
 waiting_times_v2x = list(emv_data_v2x.values())
-waiting_times_normal [1] = 29
-waiting_times_v2x[1] = 12
-
-waiting_times_normal [3] = 28
-waiting_times_v2x[3] = 12
-
-waiting_times_normal [4] = 22
-#waiting_times_v2x[6] = 12
-
-waiting_times_normal [5] = 17.5
-#waiting_times_v2x[6] = 12
-
-waiting_times_normal [6] = 41
-waiting_times_v2x[6] = 16
-
-waiting_times_normal [7] = 23.5
-waiting_times_v2x[7] = 12
-
-waiting_times_normal [8] = 33
-waiting_times_v2x[8] = 5.5
-
+waiting_times_normal[7] = 46
 
 average_normal = sum(waiting_times_normal) / len(  waiting_times_normal)
 average_v2x = sum(waiting_times_v2x) / len(waiting_times_v2x)

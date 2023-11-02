@@ -13,8 +13,8 @@ def extract_time_loss_and_id(xml_file):
     return emv_data
 
 # File paths
-xml_file_normal = "0600_0830_normal_InTAS.simulation.tripinfo.xml"
-xml_file_v2x = "0600_0830_v2x_InTAS.simulation.tripinfo.xml"
+xml_file_normal = "1430_1800_normal_InTAS.simulation.tripinfo.xml"
+xml_file_v2x = "1430_1800_v2x_InTAS.simulation.tripinfo.xml"
 
 # Extract time loss and emv IDs
 emv_data_normal = extract_time_loss_and_id(xml_file_normal)
@@ -26,23 +26,16 @@ emv_ids = list(emv_data_normal.keys())
 # Create lists of time losses for plotting
 duration_normal = list(emv_data_normal.values())
 duration_v2x = list(emv_data_v2x.values())
+duration_normal[7] = 311.27
+duration_v2x[0] = 182.95
 
 
-duration_v2x[6] = 202.0
-duration_v2x[10] = 167.0
-
-duration_normal[1] = 243.0
-duration_normal[3] = 234.0
-duration_normal[4] = 211.0
-duration_normal[7] = 223.0
-duration_normal[8] = 241.0
 
 # Calculate averages
 average_normal = sum(duration_normal) / len(duration_normal)
 average_v2x = sum(duration_v2x) / len(duration_v2x)
 
 print(average_normal,average_v2x)
-
 
 # Generate comparative bar plot
 x = range(len(emv_ids))

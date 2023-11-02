@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+  
+    <vType id="emergency_veh" vClass="emergency" maxSpeed="85" speedFactor="1.5" guiShape="police" >
+        <param key="has.tripinfo.device" value="true"/>
+    </vType>
+
+<!-- The following xml route file is for emergency vehicles. They start from 6 AM in the morning until 8:30 AM.
+ This time stamp is taken keeping in mind the heavy traffic during this time interval-->
+
+
+
+
+    <!-- <trip id="emv_0" type="emergency_veh" depart="21600" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_1" type="emergency_veh" depart="22500" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_2" type="emergency_veh" depart="23400" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/> 
+    <trip id="emv_3" type="emergency_veh" depart="24300" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>-->
+    <trip id="emv_4" type="emergency_veh" depart="25200" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_5" type="emergency_veh" depart="26100" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_6" type="emergency_veh" depart="27000" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_7" type="emergency_veh" depart="27900" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_8" type="emergency_veh" depart="28800" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_9" type="emergency_veh" depart="29700" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_10" type="emergency_veh" depart="30600" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <!-- <trip id="emv_11" type="emergency_veh" depart="300" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_12" type="emergency_veh" depart="600" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_13" type="emergency_veh" depart="900" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_14" type="emergency_veh" depart="1200" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_15" type="emergency_veh" depart="1500" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_16" type="emergency_veh" depart="1500" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_17" type="emergency_veh" depart="1800" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_18" type="emergency_veh" depart="2100" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_19" type="emergency_veh" depart="2400" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_20" type="emergency_veh" depart="2700" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/> -->
+</routes>

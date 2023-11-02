@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-10-02 14:23:23 by Eclipse SUMO sumo Version 1.12.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="../../InTAS/scenario/ingolstadt.net.xml"/>
+        <route-files value="../../InTAS/scenario/routes/InTAS_emv_1430_1800.rou.xml,../../InTAS/scenario/routes/InTAS_013_1.rou.xml,../../InTAS/scenario/routes/InTAS_014.rou.xml,../../InTAS/scenario/routes/InTAS_015.rou.xml,../../InTAS/scenario/routes/InTAS_016.rou.xml,../../InTAS/scenario/routes/InTAS_017.rou.xml,../../InTAS/scenario/routes/InTAS_018.rou.xml,../../InTAS/scenario/routes/InTAS_019_1.rou.xml"/>
+        <additional-files value="../../InTAS/scenario/BusStations.add.xml,../../InTAS/scenario/InTAS_E1.add.xml,../../InTAS/scenario/InTAS.poly.xml"/>
+    </input>
+
+    <output>
+        <summary-output value="../../InTAS/scenario/InTAS.simulation.summary.xml"/>
+        <tripinfo-output value="../../InTAS/scenario/InTAS.simulation.tripinfo.xml"/>
+        <statistic-output value="../../InTAS/scenario/InTAS.simulation.statistic.xml"/>
+    </output>
+
+    <time>
+        <begin value="50000"/>
+        <step-length value="1"/>
+    </time>
+
+    <processing>
+        <threads value="1"/>
+        <route-steps value="200"/>
+        <ignore-junction-blocker value="15"/>
+        <time-to-teleport value="300"/>
+        <time-to-teleport.highways value="300"/>
+        <max-depart-delay value="300"/>
+        <default.carfollowmodel value="Krauss"/>
+        <parking.maneuver value="true"/>
+        <pedestrian.model value="striping"/>
+        <pedestrian.striping.stripe-width value="0.55"/>
+        <pedestrian.striping.jamtime value="30"/>
+    </processing>
+
+    <routing>
+        <routing-algorithm value="dijkstra"/>
+        <persontrip.transfer.car-walk value="allJunctions"/>
+        <device.rerouting.probability value="0.82"/>
+        <device.rerouting.explicit value="default_001,default_002,default_003,default_004,default_005,default_006,default_007,default_008,default_009,default_010,default_011,default_012,default_013,default_014,default_015,default_016,default_017,default_018,default_019,default_020,default_021,default_022,random_001,random_002,random_003,random_004,random_005,random_006,random_007,random_008,random_009,random_010,random_011,random_012,random_013,random_014,random_015,random_016,random_017,random_018,random_019,random_020,random_021,random_022"/>
+        <device.rerouting.period value="300"/>
+        <device.rerouting.threads value="1"/>
+        <device.rerouting.synchronize value="true"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <no-warnings value="true"/>
+        <log value="../../InTAS/scenario/InTAS.simulation.log"/>
+        <duration-log.statistics value="true"/>
+    </report>
+
+    <tripinfo_device>
+        <device.tripinfo.probability value="0"/>
+    </tripinfo_device>
+
+    <traci_server>
+        <remote-port value="46441"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="../../InTAS/scenario/InTAS.view.xml"/>
+        <tracker-interval value="1"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+    <tripinfo id="emv_0" depart="52200.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="52399.00" arrivalLane="-315358246_1" arrivalPos="99.50" arrivalSpeed="19.54" duration="199.00" routeLength="2243.63" waitingTime="37.00" waitingCount="1" stopTime="0.00" timeLoss="76.33" rerouteNo="1" devices="tripinfo_emv_0 routing_emv_0" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_1" depart="53100.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="53311.00" arrivalLane="-315358246_2" arrivalPos="99.50" arrivalSpeed="16.28" duration="211.00" routeLength="2243.63" waitingTime="33.00" waitingCount="3" stopTime="0.00" timeLoss="88.48" rerouteNo="1" devices="tripinfo_emv_1 routing_emv_1" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_2" depart="54000.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="54214.00" arrivalLane="-315358246_1" arrivalPos="99.50" arrivalSpeed="14.87" duration="214.00" routeLength="2243.63" waitingTime="29.00" waitingCount="4" stopTime="0.00" timeLoss="91.26" rerouteNo="1" devices="tripinfo_emv_2 routing_emv_2" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_3" depart="54900.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="55115.00" arrivalLane="-315358246_2" arrivalPos="99.50" arrivalSpeed="16.34" duration="215.00" routeLength="2243.63" waitingTime="6.00" waitingCount="2" stopTime="0.00" timeLoss="92.36" rerouteNo="1" devices="tripinfo_emv_3 routing_emv_3" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_4" depart="55800.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="55999.00" arrivalLane="-315358246_2" arrivalPos="99.50" arrivalSpeed="19.87" duration="199.00" routeLength="2243.63" waitingTime="36.00" waitingCount="3" stopTime="0.00" timeLoss="75.76" rerouteNo="1" devices="tripinfo_emv_4 routing_emv_4" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_5" depart="56700.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="56909.00" arrivalLane="-315358246_1" arrivalPos="99.50" arrivalSpeed="15.33" duration="209.00" routeLength="2243.63" waitingTime="21.00" waitingCount="5" stopTime="0.00" timeLoss="86.38" rerouteNo="1" devices="tripinfo_emv_5 routing_emv_5" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_6" depart="57600.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="57799.00" arrivalLane="-315358246_1" arrivalPos="99.50" arrivalSpeed="19.76" duration="199.00" routeLength="2243.63" waitingTime="26.00" waitingCount="3" stopTime="0.00" timeLoss="76.06" rerouteNo="1" devices="tripinfo_emv_6 routing_emv_6" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_7" depart="58500.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="58892.00" arrivalLane="-315358246_2" arrivalPos="99.50" arrivalSpeed="14.26" duration="392.00" routeLength="2350.11" waitingTime="151.00" waitingCount="9" stopTime="0.00" timeLoss="274.21" rerouteNo="1" devices="tripinfo_emv_7 routing_emv_7" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_8" depart="59400.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="59698.00" arrivalLane="-315358246_2" arrivalPos="99.50" arrivalSpeed="12.82" duration="298.00" routeLength="2350.11" waitingTime="64.00" waitingCount="10" stopTime="0.00" timeLoss="180.17" rerouteNo="1" devices="tripinfo_emv_8 routing_emv_8" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_9" depart="60300.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="60511.00" arrivalLane="-315358246_2" arrivalPos="99.50" arrivalSpeed="14.60" duration="211.00" routeLength="2243.63" waitingTime="11.00" waitingCount="2" stopTime="0.00" timeLoss="88.66" rerouteNo="1" devices="tripinfo_emv_9 routing_emv_9" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_10" depart="61200.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="61418.00" arrivalLane="-315358246_2" arrivalPos="99.50" arrivalSpeed="20.14" duration="218.00" routeLength="2352.16" waitingTime="42.00" waitingCount="6" stopTime="0.00" timeLoss="99.89" rerouteNo="1" devices="tripinfo_emv_10 routing_emv_10" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_11" depart="62100.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="62312.00" arrivalLane="-315358246_2" arrivalPos="99.50" arrivalSpeed="14.47" duration="212.00" routeLength="2243.63" waitingTime="23.00" waitingCount="1" stopTime="0.00" timeLoss="89.13" rerouteNo="1" devices="tripinfo_emv_11 routing_emv_11" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_12" depart="63000.00" departLane="25122830#0_1" departPos="6.60" departSpeed="5.32" departDelay="0.00" arrival="63210.00" arrivalLane="-315358246_2" arrivalPos="99.50" arrivalSpeed="19.63" duration="210.00" routeLength="2243.63" waitingTime="20.00" waitingCount="4" stopTime="0.00" timeLoss="87.93" rerouteNo="1" devices="tripinfo_emv_12 routing_emv_12" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_13" depart="63900.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="64110.00" arrivalLane="-315358246_2" arrivalPos="99.50" arrivalSpeed="16.27" duration="210.00" routeLength="2352.16" waitingTime="37.00" waitingCount="4" stopTime="0.00" timeLoss="91.75" rerouteNo="1" devices="tripinfo_emv_13 routing_emv_13" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+    <tripinfo id="emv_14" depart="64800.00" departLane="25122830#0_1" departPos="6.60" departSpeed="12.50" departDelay="0.00" arrival="65088.00" arrivalLane="-315358246_1" arrivalPos="99.50" arrivalSpeed="19.57" duration="288.00" routeLength="2243.63" waitingTime="67.00" waitingCount="5" stopTime="0.00" timeLoss="165.42" rerouteNo="1" devices="tripinfo_emv_14 routing_emv_14" vType="emergency_veh" speedFactor="1.50" vaporized=""/>
+</tripinfos>

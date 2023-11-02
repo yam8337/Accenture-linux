@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+  
+    <vType id="emergency_veh" vClass="emergency" maxSpeed="85" speedFactor="1.5" guiShape="police" >
+        <param key="has.tripinfo.device" value="true"/>
+    </vType>
+
+
+    
+    <!-- The flow doesnt work.
+    EMV are generated according to required period. However, they do not perform the function of emergency.
+    That is, they are stopping at TLS and behind other traffic -->
+    <!-- <flow id="emv_" type="emergency_veh" begin="10" end="1000" number="3" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/> -->
+    <!-- <trip id="emv_0" type="emergency_veh" depart="0" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_1" type="emergency_veh" depart="300" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_2" type="emergency_veh" depart="600" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_3" type="emergency_veh" depart="900" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_4" type="emergency_veh" depart="1200" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/> -->
+    <trip id="emv_5" type="emergency_veh" depart="1500" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <!-- <trip id="emv_6" type="emergency_veh" depart="50" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/> -->
+    <!-- <trip id="emv_7" type="emergency_veh" depart="1800" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_8" type="emergency_veh" depart="2100" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_9" type="emergency_veh" depart="2400" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_10" type="emergency_veh" depart="2700" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/> -->
+</routes>

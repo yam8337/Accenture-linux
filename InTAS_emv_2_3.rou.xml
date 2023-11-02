@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+  
+    <vType id="emergency_veh" vClass="emergency" maxSpeed="85" speedFactor="1.5" guiShape="police" >
+        <param key="has.tripinfo.device" value="true"/>
+    </vType>
+
+<!-- The following xml route file is for emergency vehicles. They start from 2 AM in the morning until 3 AM.
+ This time stamp is taken keeping in mind the least traffic during this time interval
+ The main purpose in order to choose this time stamp is to find will v2x ^be as effective in low density as it is in heavy traffic scenario.
+ The results would back us up with the concret proof that v2x is effective only in peak condition scenario and not in conditions with less vehicles in the street-->
+
+
+
+
+    <trip id="emv_0" type="emergency_veh" depart="7200" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_1" type="emergency_veh" depart="8100" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_2" type="emergency_veh" depart="9000" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_3" type="emergency_veh" depart="9900" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+    <trip id="emv_4" type="emergency_veh" depart="10800" departLane="best" departSpeed="max" from="25122830#0" to="-315358246"/>
+
+    
+</routes>

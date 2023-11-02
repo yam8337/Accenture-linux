@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-08-01 10:08:54 by Eclipse SUMO sumo Version 1.17.0
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+	<input>
+		<net-file value="ingolstadt.net.xml"/>
+		<!-- The OG -->
+		<!--<route-files value="routes/ped.rou.xml,routes/BusRoutes.flow.xml,routes/InTAS_001.rou.xml,routes/InTAS_003.rou.xml,
+		routes/InTAS_004.rou.xml,routes/InTAS_005.rou.xml,routes/InTAS_006.rou.xml,routes/InTAS_007.rou.xml,routes/InTAS_008.rou.xml,
+		routes/InTAS_009.rou.xml,routes/InTAS_010.rou.xml,routes/InTAS_011.rou.xml,routes/InTAS_012.rou.xml,routes/InTAS_013.rou.xml,
+		routes/InTAS_014.rou.xml,routes/InTAS_015.rou.xml,routes/InTAS_016.rou.xml,routes/InTAS_017.rou.xml,routes/InTAS_018.rou.xml,
+		routes/InTAS_019.rou.xml,routes/InTAS_020.rou.xml,routes/InTAS_021.rou.xml,routes/InTAS_022.rou.xml"/> -->
+		
+		<!-- spliting the first InTAS_001 file into 2 parts. first part has routes until 3000 sec and second has rest as InTAS_001_02 -->
+		<!--<route-files value="routes/ped.rou.xml,routes/BusRoutes.flow.xml,routes/InTAS_001.rou.xml,routes/InTAS_001_02.rou.xml,
+		routes/InTAS_003.rou.xml,routes/InTAS_004.rou.xml,routes/InTAS_005.rou.xml,routes/InTAS_006.rou.xml,routes/InTAS_007.rou.xml,
+		routes/InTAS_008.rou.xml,routes/InTAS_009.rou.xml,routes/InTAS_010.rou.xml,routes/InTAS_011.rou.xml,routes/InTAS_012.rou.xml,
+		routes/InTAS_013.rou.xml,routes/InTAS_014.rou.xml,routes/InTAS_015.rou.xml,routes/InTAS_016.rou.xml,routes/InTAS_017.rou.xml,
+		routes/InTAS_018.rou.xml,routes/InTAS_019.rou.xml,routes/InTAS_020.rou.xml,routes/InTAS_021.rou.xml,routes/InTAS_022.rou.xml"/> -->
+		
+		<!-- Using only the first part of the InTAS_001 which is until 3000 sec. -->
+		<!-- <route-files value="routes/InTAS_001.rou.xml,
+		routes/InTAS_emv.rou.xml"/>  -->
+
+		<!-- Using only from 7200 till 10800  -->
+		<!-- <route-files value="routes/InTAS_emv_2_3.rou.xml,
+		routes/InTAS_0200_0300.rou.xml"/> -->
+
+		<!-- Using only from 21,600 till 30,600 -->
+		<route-files value="routes/InTAS_emv_6_8.5.rou.xml,
+		routes/InTAS_003.rou.xml,routes/InTAS_004.rou.xml,
+		routes/InTAS_005.rou.xml,routes/InTAS_006.rou.xml,routes/InTAS_007.rou.xml"/> 
+
+		<!-- Using only from 52,200 till 64,800 -->
+		<!-- <route-files value="routes/InTAS_emv_1430_1800.rou.xml,
+		routes/InTAS_013_1.rou.xml,routes/InTAS_014.rou.xml,
+		routes/InTAS_015.rou.xml,routes/InTAS_016.rou.xml,routes/InTAS_017.rou.xml,
+		routes/InTAS_018.rou.xml,routes/InTAS_019_1.rou.xml"/>  -->
+		
+		<additional-files value="BusStations.add.xml,InTAS_E1.add.xml,InTAS.poly.xml"/>
+	</input>
+	<output>
+		<summary-output value="InTAS.simulation.summary.xml"/>
+		<tripinfo-output value="InTAS.simulation.tripinfo.xml"/>
+		<statistic-output value="InTAS.simulation.statistic.xml"/>
+	</output>
+	<time>
+		<begin value="24000"/>
+		<step-length value="1"/>
+		<end value=""/>
+	</time>
+	<processing>
+		<route-steps value="200"/>
+		<threads value="1"/>
+		<ignore-junction-blocker value="15"/>
+		
+		<ignore-route-errors value="true"/>
+        <lateral-resolution value="1" />
+
+	    <time-to-teleport value="300"/>
+		<time-to-teleport.highways value="300"/>
+        <max-depart-delay value="300"/>
+		<default.carfollowmodel value="Krauss"/>
+		<parking.maneuver value="true"/>
+		<pedestrian.model value="striping"/>
+		<pedestrian.striping.stripe-width value="0.55"/>
+		<pedestrian.striping.jamtime value="30"/>
+	</processing>
+	<routing>
+		<routing-algorithm value="dijkstra"/>
+		<device.rerouting.explicit value= "default_001,default_002,default_003,default_004,default_005,default_006,default_007,default_008,default_009,default_010,default_011,default_012,default_013,default_014,default_015,default_016,default_017,default_018,default_019,default_020,default_021,default_022,random_001,random_002,random_003,random_004,random_005,random_006,random_007,random_008,random_009,random_010,random_011,random_012,random_013,random_014,random_015,random_016,random_017,random_018,random_019,random_020,random_021,random_022"/>
+		<device.rerouting.probability value="0.82"/>
+		<device.rerouting.period value="300" />
+		<device.rerouting.threads value="1"/>
+		<device.rerouting.synchronize value="true"/>
+        
+        <device.bluelight.explicit value ="emv_0,emv_1,emv_2,emv_3,emv_4,emv_5,emv_6,emv_7,emv_8,emv_9,emv_10,emv_11,emv_12,emv_13,emv_14" />
+        <device.bluelight.reactiondist value="300" />
+        
+        <device.tripinfo.probability value="0.0"/>
+		
+        <persontrip.transfer.car-walk value="allJunctions"/>
+	</routing>
+    
+	
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+		<no-warnings value="true"/>
+	    <log value="InTAS.simulation.log"/>
+	</report>
+
+	<gui_only>
+        <gui-settings-file value="InTAS.view.xml"/>
+    </gui_only>
+
+
+</configuration>
